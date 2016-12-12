@@ -8,6 +8,12 @@
     $urlRouterProvider.otherwise('/')
 
     $stateProvider
+      .state('index', {
+        url: '/',
+        templateUrl: 'parties.html',
+        controller: 'ProfPartsController',
+        controllerAs: 'profVm'
+      })
       .state('signin', {
         url: '/signin',
         templateUrl: 'signin.html',
