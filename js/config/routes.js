@@ -28,5 +28,10 @@
         controller: 'ProfPartsShowController',
         controllerAs: 'showVm'
       })
+      .state('edit', {
+        url: '/edit/:id',
+        templateUrl: 'js/profParties/editparty.html',
+        controller: 'ProfPartsEditController',
+      })
   }
 }());

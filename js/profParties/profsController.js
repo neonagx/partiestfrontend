@@ -64,8 +64,25 @@
     var vm = this
     vm.part = {}
 
-    $http
-      .get('http://localhost:3000/professionals/' + professional._id)
+    ProfPartResource.get({id: $stateParams.id}).$promise.then(function(jsonParty){
+      vm.part = jsonParty
+    })
+  }
 
+  function ProfPartsEditController(ProfPartResource, $state, $stateParams){
+    var vm = this
+    vm.part = {}
+    vm.updatePart = updatePart
+
+    ProfPartResource.get({id: $stateParams.id}).$promise.then(function(jsonParty){
+      vm.part = jsonParty
+    })
+
+    function updatePart(){
+      ProfPartResource.update(vm.part).$promise.then(function(editedParty){
+        vm.part = editedParty
+        $state.go('index')
+      })
+    }
   }
 }());
