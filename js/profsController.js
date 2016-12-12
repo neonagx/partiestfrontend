@@ -9,6 +9,7 @@
     var vm = this
     vm.all = []
     vm.getProfParts = getProfParts
+    vm.deleteProfParts = deleteProfParts
 
     getProfParts()
     function getProfParts(){
@@ -19,5 +20,13 @@
         })
     }
 
+    function deleteProfParts(professional){
+      $http
+        .delete('http://localhost:3000/professionals/' + professional._id)
+        .then(function(res){
+          var index = vm.all.indexOf(professional)
+          vm.all.splice(index, 1)
+        })
+    }
   }
 }());
