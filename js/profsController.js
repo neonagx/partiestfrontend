@@ -13,9 +13,9 @@
     getProfParts()
     function getProfParts(){
       $http
-        .get('http://localhost:3000/profParts')
+        .get('http://localhost:3000/professionals')
         .then(function(res){
-          vm.all = res.data.profParts
+          vm.all = res.data.professionals
         })
     }
 
