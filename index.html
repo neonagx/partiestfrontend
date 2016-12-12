@@ -7,25 +7,16 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
 
-
   <body ng-app="ThePartiest">
     <header ng-controller="NavbarController as vm">
-      <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="jumbotron">
         <div class="container">
-          <button ng-hide="vm.authService.isLoggedIn()" ui-sref="signin" type="button" class="btn btn-default navbar-btn navbar-left"></button>
-          <button ng-show="vm.authService.isLoggedIn()" ng-click= "vm.authService.logOut()" type="button" class="btn btn-default navbar-btn navbar-right">Sign out</button>
+          <h1>Welcome to The Partiest</h1>
+          <button ng-hide="vm.authService.isLoggedIn()" ui-sref="signin" type="button" class="btn btn-default navbar-btn navbar-left">Sign in</button>
+          <button ng-show="vm.authService.isLoggedIn()" ng-click= "vm.authService.logOut()" type="button" class="btn btn-default navbar-btn navbar-left">Sign out</button>
         </div>
-      </nav>
+      </div>
     </header>
-
-
-
-
-
-
-
-
-
 
 
   <script src="js/auth/jwt-decode.2.0.1.js"></script>
