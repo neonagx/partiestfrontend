@@ -1,6 +1,7 @@
 <ul>
   <li ng-repeat="professional in profVm.all">
     <strong>{{professional.partyTitle}}</strong>
+    {{professional.publicOrPrivate}}
     <button ng-click="profVm.deleteProfParts(professional)">Delete this Party</button>
   </li>
 </ul>
