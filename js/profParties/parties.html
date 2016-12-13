@@ -1,9 +1,15 @@
-<ul>
-  <li ng-repeat="professional in profVm.all">
-    <strong>{{professional.partyTitle}}</strong>
-    {{professional.publicOrPrivate}}
-    <a ui-sref="show({id: professional._id})">More Info</a>
-    <a ui-sref="edit({id: professional._id})">Edit this Party</a>
-    <button ng-click="profVm.deleteProfParts(professional)">Delete this Party</button>
-  </li>
-</ul>
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail" ng-repeat="professional in profVm.all">
+      <!-- <img src= alt="image"> -->
+      <div class="caption">
+        <h3>{{professional.partyTitle}}</h3>
+        <p>{{professional.description}}</p>
+        <p>{{professional.publicOrPrivate}}</p>
+        <a ui-sref="show({id: professional._id})">More Info</a>
+        <a ui-sref="edit({id: professional._id})">Edit this Party</a>
+        <button ng-click="profVm.deleteProfParts(professional)">Delete this Party</button>
+      </div>
+    </div>
+  </div>
+</div>
