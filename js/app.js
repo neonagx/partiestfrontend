@@ -4,6 +4,8 @@
     .module('ThePartiest', ['ui.router', 'ngResource'])
     .config(ProfRouter)
 
+  ProfRouter.$inject = ['$stateProvider', '$urlRouterProvider']
+  
   function ProfRouter($stateProvider, $urlRouterProvider){
     $urlRouterProvider.otherwise('/')
 

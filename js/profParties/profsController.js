@@ -11,7 +11,7 @@
   ProfPartsShowController.$inject = ['ProfPartResource', '$stateParams']
   ProfPartsEditController.$inject = ['ProfPartResource', '$state', '$stateParams']
 
-  function ProfPartsController($http){
+  function ProfPartsController(ProfPartResource){
     var vm = this
     vm.all = []
     vm.deleteProfParts = deleteProfParts
@@ -65,7 +65,8 @@
     vm.part = {}
 
     ProfPartResource.get({id: $stateParams.id}).$promise.then(function(jsonParty){
-      vm.part = jsonParty
+      vm.part = jsonParty.professional
+
     })
   }
 

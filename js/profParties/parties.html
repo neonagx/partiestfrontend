@@ -2,7 +2,7 @@
   <li ng-repeat="professional in profVm.all">
     <strong>{{professional.partyTitle}}</strong>
     {{professional.publicOrPrivate}}
-    <button ng-click="showVm">More Info</button>
+    <a ui-sref="show({id: professional._id})">More Info</a>
     <button ng-click="profVm.deleteProfParts(professional)">Delete this Party</button>
   </li>
 </ul>
