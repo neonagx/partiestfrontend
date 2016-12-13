@@ -1,0 +1,61 @@
+<h3>Edit This Party</h3>
+<form ng-submit="editVm.updatePart()">
+  <div>
+    <label for="editParty-title">Party Title:</label>
+    <input type="text" ng-model="editVm.partyTitle" placeholder="Enter Party Title Here">
+  </div>
+  <div>
+    <label for="editParty-organizer">Organizer:</label>
+    <input type="text" ng-model="editVm.organizer" placeholder="Enter Party Title Here">
+  </div>
+  <div>
+    <label for="editParty-company">Company:</label>
+    <input type="text" ng-model="editVm.company" placeholder="Enter Party Title Here">
+  </div>
+  <div>
+    <label for="editParty-video">Video:</label>
+    <input type="text" ng-model="editVm.video" placeholder="Enter Party Title Here">
+  </div>
+  <div>
+    <label for="editParty-map">Map:</label>
+    <input type="text" ng-model="editVm.map" placeholder="Enter Party Title Here">
+  </div>
+  <div>
+    <label for="editParty-location">Location:</label>
+    <input type="text" ng-model="editVm.location" placeholder="Enter Party Title Here">
+  </div>
+  <div>
+    <label for="editParty-email">Email:</label>
+    <input type="text" ng-model="editVm.email" placeholder="Enter Party Title Here">
+  </div>
+  <div>
+    <label for="editParty-cellPhone">Cell Phone:</label>
+    <input type="text" ng-model="editVm.cellPhone" placeholder="Enter Party Title Here">
+  </div>
+  <div>
+    <label for="editParty-officePhone">Office Phone:</label>
+    <input type="text" ng-model="editVm.officePhone" placeholder="Enter Party Title Here">
+  </div>
+  <div>
+    <label for="editParty-attendees">Number Attending:</label>
+    <input type="number" ng-model="editVm.attendees" placeholder="Enter Party Title Here">
+  </div>
+  <div>
+    <label for="editParty-description">Description of the Party Event:</label>
+    <input type="text" ng-model="editVm.description" placeholder="Enter Party Title Here">
+  </div>
+  <div>
+    <label for="editParty-publicOrPrivate">Public or Private Event?:</label>
+    <select type="text" ng-model="editVm.publicOrPrivate">
+      <option value="Public">Public</option>
+      <option value="Private">Private</option>
+    </select>
+  </div>
+  <div>
+    <label for="editParty-sponsors">Sponsors:</label>
+    <input type="text" ng-model="editVm.sponsors" placeholder="Enter Party Title Here">
+  </div>
+  <div>
+    <input type="submit" value="Edit New Party Event!">
+  </div>
+</form>

@@ -32,6 +32,7 @@
         url: '/edit/:id',
         templateUrl: 'js/profParties/editparty.html',
         controller: 'ProfPartsEditController',
+        controllerAs: 'editVm'
       })
   }
 }());

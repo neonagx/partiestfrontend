@@ -3,6 +3,7 @@
     <strong>{{professional.partyTitle}}</strong>
     {{professional.publicOrPrivate}}
     <a ui-sref="show({id: professional._id})">More Info</a>
+    <a ui-sref="edit({id: professional._id})">Edit this Party</a>
     <button ng-click="profVm.deleteProfParts(professional)">Delete this Party</button>
   </li>
 </ul>

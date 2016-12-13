@@ -76,12 +76,14 @@
     vm.updatePart = updatePart
 
     ProfPartResource.get({id: $stateParams.id}).$promise.then(function(jsonParty){
-      vm.part = jsonParty
+      vm.part = jsonParty.professional
+      console.log(jsonParty.professional)
     })
 
     function updatePart(){
       ProfPartResource.update(vm.part).$promise.then(function(editedParty){
-        vm.part = editedParty
+        vm.part = editedParty.professional
+        console.log(editedParty.professional)
         $state.go('index')
       })
     }
