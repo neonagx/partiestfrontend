@@ -19,14 +19,7 @@
     ProfPartResource.query().$promise.then(function(data){
       vm.all = data
     })
-    // getProfParts()
-    // function getProfParts(){
-    //   $http
-    //     .get('http://localhost:3000/professionals')
-    //     .then(function(res){
-    //       vm.all = res.data.professionals
-    //     })
-    // }
+
     function deleteProfParts(deleteParty){
       ProfPartResource.delete({id:deleteParty._id}).$promise.then(function(res){
         if(res.message){
@@ -37,14 +30,6 @@
         }
       })
     }
-    // function deleteProfParts(professional){
-    //   $http
-    //     .delete('http://localhost:3000/professionals/' + professional._id)
-    //     .then(function(res){
-    //       var index = vm.all.indexOf(professional)
-    //       vm.all.splice(index, 1)
-    //     })
-    // }
   }
 
   function ProfPartsNewController(ProfPartResource, $state){
@@ -65,9 +50,7 @@
     vm.part = {}
 
     ProfPartResource.get({id: $stateParams.id}).$promise.then(function(jsonParty){
-      vm.part = jsonParty.professional
-      console.log(vm.part)
-
+      vm.part = jsonParty
     })
   };
 
@@ -77,13 +60,12 @@
     vm.updatePart = updatePart
 
     ProfPartResource.get({id: $stateParams.id}).$promise.then(function(jsonParty){
-      vm.part = jsonParty.professional
+      vm.part = jsonParty
     })
 
     function updatePart(){
       ProfPartResource.update(vm.part).$promise.then(function(editedParty){
-        vm.part = editedParty.professional
-        console.log(editedParty.professional)
+        vm.part = editedParty
         $state.go('index')
       })
     }

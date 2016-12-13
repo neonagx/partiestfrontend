@@ -8,4 +8,3 @@
 
     vm.map = new google.maps.Map(document.getElementById('map'), mapOptions)
   })()
- console.log('ajsfdksa;')
