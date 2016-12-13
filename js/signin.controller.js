@@ -11,17 +11,9 @@
     var vm = this;
 
     // BINDINGS
-    vm.signUp = {
-      email:    "email@email.com",
-      name:     "Paul Baik",
-      password: "password",
-      passwordConfirmation: "password"
-    };
+    vm.signUp = {}
     vm.submitSignUp = submitSignUp;
-    vm.logIn = {
-      email:    "email@email.com",
-      password: "password"
-    };
+    vm.logIn = {}
     vm.submitLogIn = submitLogIn;
     vm.conflict = false;
 

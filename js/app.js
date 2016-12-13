@@ -1,11 +1,11 @@
 (function() {
   'use strict';
   angular
-    .module('ThePartiest', ['ui.router', 'ngResource'])
+    .module('ThePartiest', ['ui.router', 'ngResource', 'ngMap'])
     .config(ProfRouter)
 
   ProfRouter.$inject = ['$stateProvider', '$urlRouterProvider']
-  
+
   function ProfRouter($stateProvider, $urlRouterProvider){
     $urlRouterProvider.otherwise('/')
 
