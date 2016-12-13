@@ -5,10 +5,11 @@
     <title>The Partiest</title>
     <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
+
   </head>
 
   <body ng-app="ThePartiest">
-
+    <div id="map"></div>
     <header ng-controller="NavbarController as vm">
       <div class="jumbotron">
         <div class="container">
@@ -45,5 +46,7 @@
   <script src="js/auth/auth.service.js"></script>
   <script src="js/auth/token.service.js"></script>
   <script src="js/auth/user.service.js"></script>
+  <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <script src="js/map.js"></script>
   </body>
 </html>

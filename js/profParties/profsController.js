@@ -66,9 +66,10 @@
 
     ProfPartResource.get({id: $stateParams.id}).$promise.then(function(jsonParty){
       vm.part = jsonParty.professional
+      console.log(vm.part)
 
     })
-  }
+  };
 
   function ProfPartsEditController(ProfPartResource, $state, $stateParams){
     var vm = this
@@ -87,4 +88,4 @@
       })
     }
   }
-}());
+})();
