@@ -6,15 +6,16 @@
     .controller('ProfPartsShowController', ProfPartsShowController)
     .controller('ProfPartsEditController', ProfPartsEditController)
 
-  ProfPartsController.$inject = ['ProfPartResource']
+  ProfPartsController.$inject = ['ProfPartResource', 'authService']
   ProfPartsNewController.$inject = ['ProfPartResource', '$state']
   ProfPartsShowController.$inject = ['ProfPartResource', '$stateParams']
   ProfPartsEditController.$inject = ['ProfPartResource', '$state', '$stateParams']
 
-  function ProfPartsController(ProfPartResource){
+  function ProfPartsController(ProfPartResource, authService){
     var vm = this
     vm.all = []
     vm.deleteProfParts = deleteProfParts
+    vm.currentUser = authService.currentUser()
 
     ProfPartResource.query().$promise.then(function(data){
       vm.all = data
