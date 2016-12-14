@@ -9,10 +9,10 @@
   <md-grid-list
         md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6"
         md-row-height-gt-md="1:1" md-row-height="2:2"
-        md-gutter="12px" md-gutter-gt-sm="8px" >
+        md-gutter="12px" md-gutter-gt-sm="8px">
 
     <md-grid-tile class="red"
-        md-rowspan="2" md-colspan="2" md-colspan-sm="1" md-colspan-xs="1">
+        md-rowspan="2" md-colspan="2" md-colspan-sm="1" md-colspan-xs="1" style="background-image: url({{professional.img}}); background-repeat: no-repeat; background-size: cover;">
         <md-grid-tile-header style="height: 100px;">
           <h1>{{professional.partyTitle}}</h1>
           <button ui-sref="show({id: professional._id})">More Info</button>
@@ -24,7 +24,6 @@
         <h2>{{professional.publicOrPrivate}}</h2>
       </md-grid-tile-footer>
     </md-grid-tile>
-
   </md-grid-list>
   <footer>
 
