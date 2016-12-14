@@ -4,17 +4,31 @@
     <label for="">Search Parties</label>
     <input type="text" ng-model="profVm.search">
   </div>
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail" ng-repeat="professional in profVm.all | orderBy: 'partyTitle' | filter: {partyTitle: profVm.search}">
-      <!-- <img src= alt="image"> -->
-      <div class="caption">
-        <h3>{{professional.partyTitle}}</h3>
-        <p>{{professional.description}}</p>
-        <p>{{professional.publicOrPrivate}}</p>
-        <a ui-sref="show({id: professional._id})">More Info</a>
-        <a ui-sref="edit({id: professional._id})" ng-if="professional.postedBy == profVm.currentUser._id">Edit this Party</a>
-        <button ng-click="profVm.deleteProfParts(professional)" ng-if="professional.postedBy == profVm.currentUser._id">Delete this Party</button>
-      </div>
-    </div>
-  </div>
+
+<div id="grid" ng-repeat="professional in profVm.all | orderBy: 'partyTitle' | filter: {partyTitle: profVm.search}">
+  <md-grid-list
+        md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6"
+        md-row-height-gt-md="1:1" md-row-height="2:2"
+        md-gutter="12px" md-gutter-gt-sm="8px" >
+
+    <md-grid-tile class="red"
+        md-rowspan="2" md-colspan="2" md-colspan-sm="1" md-colspan-xs="1">
+        <md-grid-tile-header style="height: 100px;">
+          <h1>{{professional.partyTitle}}</h1>
+          <button ui-sref="show({id: professional._id})">More Info</button>
+          <button ui-sref="edit({id: professional._id})" ng-if="professional.postedBy == profVm.currentUser._id">Edit this Party</button>
+          <button ng-click="profVm.deleteProfParts(professional)" ng-if="professional.postedBy == profVm.currentUser._id">Delete this Party</button>
+        </md-grid-tile-header>
+      <md-grid-tile-footer style="height: 100px;">
+        <h2>{{professional.description}}</h2>
+        <h2>{{professional.publicOrPrivate}}</h2>
+      </md-grid-tile-footer>
+    </md-grid-tile>
+
+  </md-grid-list>
+  <footer>
+
+  </footer>
+
+
 </div>
