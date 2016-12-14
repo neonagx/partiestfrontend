@@ -1,7 +1,7 @@
 (function() {
   'use strict';
   angular
-    .module('ThePartiest', ['ui.router', 'ngResource', 'ngMap'])
+    .module('ThePartiest', ['ui.router', 'ngResource', 'ngMap', 'ngMaterial'])
     .config(ProfRouter)
 
   ProfRouter.$inject = ['$stateProvider', '$urlRouterProvider']
