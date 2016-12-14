@@ -12,8 +12,8 @@
         <p>{{professional.description}}</p>
         <p>{{professional.publicOrPrivate}}</p>
         <a ui-sref="show({id: professional._id})">More Info</a>
-        <a ui-sref="edit({id: professional._id})" ng-if="professional.postedBy == profVm.currentUser">Edit this Party</a>
-        <button ng-click="profVm.deleteProfParts(professional)" ng-if="professional.postedBy == profVm.currentUser">Delete this Party</button>
+        <a ui-sref="edit({id: professional._id})" ng-if="professional.postedBy == profVm.currentUser._id">Edit this Party</a>
+        <button ng-click="profVm.deleteProfParts(professional)" ng-if="professional.postedBy == profVm.currentUser._id">Delete this Party</button>
       </div>
     </div>
   </div>

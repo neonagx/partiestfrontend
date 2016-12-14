@@ -10,6 +10,8 @@
   </ng-map>
 </div>
 <div id="{{showVm.part.partyTitle}}" style="width: 32%; float:right; max-height:450px"></div>
+
+<img ng-src="{{showVm.part.img}}" alt="{{showVm.part.img}}">
 <div>
   Party Title: {{showVm.part.partyTitle}}
   Party Organizer: {{showVm.part.organizer}}
@@ -23,4 +25,5 @@
   Party Description: {{showVm.part.description}}
   Public or Private Party?: {{showVm.part.publicOrPrivate}}
   Sponsors: {{showVm.part.sponsors}}
+  Posted By: {{showVm.part.postedBy}}
 </div>
