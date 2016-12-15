@@ -1,3 +1,14 @@
+body {
+  background-image: url("http://i.imgur.com/IZM3Ax0.jpg");
+  background-size: cover;
+  margin: 0 auto;
+  text-align: center;
+}
+
+label{
+  color: white;
+  text-align: center;
+}
 ng-map {
   max-width: 90%;
   height: 800px;
