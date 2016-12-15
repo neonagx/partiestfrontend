@@ -2,7 +2,7 @@
 <div class="row">
   <div >
     <label for="">Search Parties</label>
-    <input type="text" ng-model="profVm.search">
+    <input type="text" ng-model="profVm.search" style="width: 1000px;">
   </div>
 <div id="grid" ng-repeat="professional in profVm.all | orderBy: 'partyTitle' | filter: {partyTitle: profVm.search}">
   <md-grid-list
@@ -13,14 +13,14 @@
     <md-grid-tile class="red"
         md-rowspan="2" md-colspan="2" md-colspan-sm="1" md-colspan-xs="1" style="background-image: url({{professional.img}}); background-repeat: no-repeat; background-size: cover;">
         <md-grid-tile-header style="height: 100px;">
-          <h1>{{professional.partyTitle}}</h1>
+          <h1 style="text-align: left">{{professional.partyTitle}}</h1>
           <button ui-sref="show({id: professional._id})">More Info</button>
           <button ui-sref="edit({id: professional._id})" ng-if="professional.postedBy == profVm.currentUser._id">Edit this Party</button>
           <button ng-click="profVm.deleteProfParts(professional)" ng-if="professional.postedBy == profVm.currentUser._id">Delete this Party</button>
         </md-grid-tile-header>
       <md-grid-tile-footer style="height: 100px;">
         <h2>{{professional.description}}</h2>
-        <h2>{{professional.publicOrPrivate}}</h2>
+        <h2 style="text-align: left">{{professional.publicOrPrivate}}</h2>
       </md-grid-tile-footer>
     </md-grid-tile>
   </md-grid-list>
