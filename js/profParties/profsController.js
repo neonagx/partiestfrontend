@@ -7,7 +7,7 @@
     .controller('ProfPartsEditController', ProfPartsEditController)
 
   ProfPartsController.$inject = ['ProfPartResource', 'authService']
-  ProfPartsNewController.$inject = ['ProfPartResource', '$state']
+  ProfPartsNewController.$inject = ['ProfPartResource', '$state', 'authService']
   ProfPartsShowController.$inject = ['ProfPartResource', '$stateParams']
   ProfPartsEditController.$inject = ['ProfPartResource', '$state', '$stateParams']
 
@@ -33,10 +33,11 @@
     }
   }
 
-  function ProfPartsNewController(ProfPartResource, $state){
+  function ProfPartsNewController(ProfPartResource, $state, authService){
     var vm = this
     vm.addProfPart = addProfPart
     vm.newProfPart = {}
+    vm.authService = authService
 
     function addProfPart(){
       ProfPartResource.save(vm.newProfPart).$promise.then(function(jsonParty){

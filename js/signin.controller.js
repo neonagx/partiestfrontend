@@ -39,6 +39,7 @@
     }
 
     function submitLogIn() {
+      $log.info('clicked')
       authService
         .logIn(vm.logIn)
         .then(

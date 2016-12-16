@@ -1,14 +1,14 @@
-<h1>The Professional Parties</h1>
-<div class="row">
-  <div >
+<h1 style="font-family:'Monoton', cursive; margin: 0 auto; font-size: 90px; color: orange;">Welcome to The Partiest</h1>
+  <div ng-if="profVm.currentUser._id">
+    <h2 style="font-family:'Monoton', cursive; font-size: 20px; color: white;">The Professional Parties</h2>
     <label for="">Search Parties</label>
-    <input type="text" ng-model="profVm.search" style="width: 1000px;">
+    <input type="text" ng-model="profVm.search" style="width:100%;">
   </div>
 <div id="grid" ng-repeat="professional in profVm.all | orderBy: 'partyTitle' | filter: {partyTitle: profVm.search}">
   <md-grid-list
-        md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6"
-        md-row-height-gt-md="1:1" md-row-height="2:2"
-        md-gutter="12px" md-gutter-gt-sm="8px">
+        md-cols-xs="2" md-cols-sm="2" md-cols-md="2" md-cols-gt-md="2"
+        md-row-height-gt-md="2:2" md-row-height="2:2"
+        md-gutter="50px" md-gutter-gt-sm="60px" style="max-width: 100%;">
 
     <md-grid-tile class="red"
         md-rowspan="2" md-colspan="2" md-colspan-sm="1" md-colspan-xs="1" style="background-image: url({{professional.img}}); background-repeat: no-repeat; background-size: cover;">

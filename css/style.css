@@ -1,35 +1,15 @@
 body {
-  background-image: url("http://i.imgur.com/IZM3Ax0.jpg");
+  background-image: url('http://i.imgur.com/IZM3Ax0.jpg');
   background-size: cover;
-  margin: 0 auto;
-  text-align: center;
-  color: white;
 }
 
-label{
-  color: white;
-  text-align: center;
-}
-ng-map {
-  max-width: 90%;
-  height: 800px;
-  background-color: grey;
+.box{
+  float:left;
+  width: 300px;
+  height: 300px;
+  margin: 1em;
 }
 
-md-grid-list {
-  margin: 8px;
-}
-
-.red {
-  background: #ff8a80;
-}
-
-md-grid-tile {
-  transition: all 400ms ease-out 50ms; }
-
-md-input-container {
-  font-size: 10px;
-}
 
 .gray {
   background: #f5f5f5; }

@@ -1,58 +1,36 @@
 <div>
-  <md-grid-list
-        md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6"
-        md-row-height-gt-md="1:1" md-row-height="2:2"
-        md-gutter="12px" md-gutter-gt-sm="8px" >
-
-    <md-grid-tile class="gray"
-        md-rowspan="3" md-colspan="2" md-colspan-sm="1" md-colspan-xs="1">
-        <div style="width: 50%; float:left; height: 600px; width: 600px;">
-          <ng-map zoom="14" center="37.7699298, -122.4469157" >
-            <directions
-              draggable="true"
-              travel-mode="DRIVING"
-              panel="{{showVm.part.partyTitle}}"
-              origin="current-location"
-              destination="{{showVm.part.location}}">
-            </directions>
-          </ng-map>
-        </div>
-      <md-grid-tile-footer>
-        <h3>Map</h3>
-      </md-grid-tile-footer>
-    </md-grid-tile>
-
-    <div id="{{showVm.part.partyTitle}}" style="float: right;"></div>
-
-    <div style="float: right; size: 300px;">
-      <img ng-src="{{showVm.part.img}}" alt="img">
-    </div>
-
-    <md-grid-tile class="blue"
-        md-rowspan="2">
-        <div style="font-size: 15px;">
-          Party Title: {{showVm.part.partyTitle}}<br>
-          Party Organizer: {{showVm.part.organizer}}<br>
-          Party Company: {{showVm.part.company}}<br>
-          Video: {{showVm.part.video}}<br>
-          Location: {{showVm.part.location}}<br>
-          Email Contact: {{showVm.part.email}}<br>
-          Cell Phone Contact: {{showVm.part.cellPhone}}<br>
-          Office Phone Contact: {{showVm.part.officePhone}}<br>
-          Number of Attendees: {{showVm.part.attendees}}<br>
-          Party Description: {{showVm.part.description}}<br>
-          Public or Private Party?: {{showVm.part.publicOrPrivate}}<br>
-          Sponsors: {{showVm.part.sponsors}}<br>
-          Posted By: {{showVm.part.postedBy}}<br>
-        </div>
-      <md-grid-tile-footer>
-        <h3>Party Description</h3>
-      </md-grid-tile-footer>
-    </md-grid-tile>
-
-  </md-grid-list>
+  <ng-map zoom="14" center="37.7699298, -122.4469157" style="height: 600px;">
+    <directions
+    draggable="true"
+    travel-mode="DRIVING"
+    panel="{{showVm.part.partyTitle}}"
+    origin="current-location"
+    destination="{{showVm.part.location}}">
+    </directions>
+  </ng-map>
 </div>
 
+<div class="box" id="{{showVm.part.partyTitle}}" style="background:#b9f6ca; max-height: 100px;"></div>
+
+<div class="box">
+  <img ng-src="{{showVm.part.img}}" alt="img">
+</div>
+
+<div class="box" style="font-size: 15px; color: black; background:#b9f6ca;">
+  Party Title: {{showVm.part.partyTitle}}<br>
+  Party Organizer: {{showVm.part.organizer}}<br>
+  Party Company: {{showVm.part.company}}<br>
+  Video: {{showVm.part.video}}<br>
+  Location: {{showVm.part.location}}<br>
+  Email Contact: {{showVm.part.email}}<br>
+  Cell Phone Contact: {{showVm.part.cellPhone}}<br>
+  Office Phone Contact: {{showVm.part.officePhone}}<br>
+  Number of Attendees: {{showVm.part.attendees}}<br>
+  Party Description: {{showVm.part.description}}<br>
+  Public or Private Party?: {{showVm.part.publicOrPrivate}}<br>
+  Sponsors: {{showVm.part.sponsors}}<br>
+  Posted By: {{showVm.part.postedBy}}<br>
+</div>
 <!--
 <div style="width: 50%; float:left; height: 600px">
   <ng-map zoom="14" center="37.7699298, -122.4469157" >
