@@ -9,14 +9,12 @@
   </head>
 
   <body ng-app="ThePartiest">
-    <md-content class="md-padding" style="background-color:orange; max-width:100%;">
+    <md-content class="md-padding" style="background-color:orange; max-width:100%;" ng-controller="NavbarController as vm">
       <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links" id="navbar">
-        <header ng-controller="NavbarController as vm">
           <md-nav-item ng-hide="vm.authService.isLoggedIn()" ui-sref="signin">Sign In</md-nav-item>
           <md-nav-item ng-show="vm.authService.isLoggedIn()" ng-click= "vm.authService.logOut()">Sign Out</md-nav-item>
-        </header>
-        <md-nav-item ui-sref="index" ng-show="vm.authService.isLoggedIn()">All Professional Parties</md-nav-item>
-        <md-nav-item ui-sref="new" ng-show="vm.authService.isLoggedIn()">Add Professional Party Event!</md-nav-item>
+          <md-nav-item ui-sref="index" ng-show="vm.authService.isLoggedIn()">All Professional Parties</md-nav-item>
+          <md-nav-item ui-sref="new" ng-show="vm.authService.isLoggedIn()">Add Professional Party Event!</md-nav-item>
       </md-nav-bar>
     </md-content>
 
