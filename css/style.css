@@ -3,11 +3,9 @@ body {
   background-size: cover;
 }
 
-.box{
-  float:left;
-  width: 300px;
-  height: 300px;
-  margin: 1em;
+td {
+  background-color: #b388ff;
+  color: white;
 }
 
 
