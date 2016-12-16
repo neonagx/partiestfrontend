@@ -5,13 +5,20 @@
     .module("ThePartiest")
     .controller("NavbarController", NavbarController);
 
-  NavbarController.$inject = ["$log", "authService", "$mdDialog"];
+  NavbarController.$inject = ["$log", "authService", "$mdDialog", "$mdSidenav"];
 
-  function NavbarController($log, authService, $mdDialog) {
+  function NavbarController($log, authService, $mdDialog, $mdSidenav) {
     var vm = this;
 
-    vm.authService = authService;
+    vm.authService = authService
     vm.showAlert = showAlert
+    vm.toggleLeft = buildToggler('left')
+
+    function buildToggler(componentId){
+      return function(){
+        $mdSidenav(componentId).toggle()
+      }
+    }
 
     function showAlert(){
       $mdDialog.show(
