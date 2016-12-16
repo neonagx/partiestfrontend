@@ -13,6 +13,7 @@
       <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links" id="navbar">
           <md-nav-item ng-hide="vm.authService.isLoggedIn()" ui-sref="signin">Sign In</md-nav-item>
           <md-nav-item ng-show="vm.authService.isLoggedIn()" ng-click= "vm.authService.logOut()">Sign Out</md-nav-item>
+          <md-nav-item ng-click="vm.showAlert()">About</md-nav-item>
           <md-nav-item ui-sref="index" ng-show="vm.authService.isLoggedIn()">All Professional Parties</md-nav-item>
           <md-nav-item ui-sref="new" ng-show="vm.authService.isLoggedIn()">Add Professional Party Event!</md-nav-item>
       </md-nav-bar>

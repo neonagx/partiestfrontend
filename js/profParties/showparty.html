@@ -1,36 +1,36 @@
-<ng-map zoom="14" center="37.7699298, -122.4469157" >
-  <directions
+<div>
+  <ng-map zoom="14" center="37.7699298, -122.4469157" style="height: 600px;">
+    <directions
     draggable="true"
     travel-mode="DRIVING"
     panel="{{showVm.part.partyTitle}}"
     origin="current-location"
     destination="{{showVm.part.location}}">
-  </directions>
-</ng-map>
+    </directions>
+  </ng-map>
+</div>
 
+<div class="box" id="{{showVm.part.partyTitle}}" style="background:#b9f6ca; max-height: 100px;"></div>
 
-<div id="{{showVm.part.partyTitle}}" style="float: right; width: 30%; max-height: 30%; background:#b9f6ca;"></div>
-
-<div>
+<div class="box">
   <img ng-src="{{showVm.part.img}}" alt="img">
 </div>
 
-
-    <div style="font-size: 15px; color: black;">
-      Party Title: {{showVm.part.partyTitle}}<br>
-      Party Organizer: {{showVm.part.organizer}}<br>
-      Party Company: {{showVm.part.company}}<br>
-      Video: {{showVm.part.video}}<br>
-      Location: {{showVm.part.location}}<br>
-      Email Contact: {{showVm.part.email}}<br>
-      Cell Phone Contact: {{showVm.part.cellPhone}}<br>
-      Office Phone Contact: {{showVm.part.officePhone}}<br>
-      Number of Attendees: {{showVm.part.attendees}}<br>
-      Party Description: {{showVm.part.description}}<br>
-      Public or Private Party?: {{showVm.part.publicOrPrivate}}<br>
-      Sponsors: {{showVm.part.sponsors}}<br>
-      Posted By: {{showVm.part.postedBy}}<br>
-    </div>
+<div class="box" style="font-size: 15px; color: black; background:#b9f6ca;">
+  Party Title: {{showVm.part.partyTitle}}<br>
+  Party Organizer: {{showVm.part.organizer}}<br>
+  Party Company: {{showVm.part.company}}<br>
+  Video: {{showVm.part.video}}<br>
+  Location: {{showVm.part.location}}<br>
+  Email Contact: {{showVm.part.email}}<br>
+  Cell Phone Contact: {{showVm.part.cellPhone}}<br>
+  Office Phone Contact: {{showVm.part.officePhone}}<br>
+  Number of Attendees: {{showVm.part.attendees}}<br>
+  Party Description: {{showVm.part.description}}<br>
+  Public or Private Party?: {{showVm.part.publicOrPrivate}}<br>
+  Sponsors: {{showVm.part.sponsors}}<br>
+  Posted By: {{showVm.part.postedBy}}<br>
+</div>
 <!--
 <div style="width: 50%; float:left; height: 600px">
   <ng-map zoom="14" center="37.7699298, -122.4469157" >

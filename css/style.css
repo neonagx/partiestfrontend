@@ -3,15 +3,11 @@ body {
   background-size: cover;
 }
 
-label{
-  color: white;
-  text-align: center;
-}
-
-ng-map {
-  max-width: 50%;
-  height: 500px;
-  background-color: grey;
+.box{
+  float:left;
+  width: 300px;
+  height: 300px;
+  margin: 1em;
 }
 
 
