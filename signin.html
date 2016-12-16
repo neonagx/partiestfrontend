@@ -1,40 +1,28 @@
-<!-- <md-dialog ng-hide="vm.toggleValue">
-  <md-dialog-content>
-    <form ng-submit="vm.submitLogIn()">
-      <label for="email">EMAIL: </label>
-      <input ng-model="email" placeholder="EMAIL">
-      <label for="password">PASSWORD:</label>
-      <input id="password" ng-model="password">
-      <button type="submit" ng-disabled-"signInForm.$invalid">Submit</button>
-    </form>
-  </md-dialog-content>
-</md-dialog> -->
-
+<h1 style="font-family:'Monoton', cursive; margin: 0 auto; font-size: 90px; color: orange;">Welcome to The Partiest</h1>
 <div class="sign-in-form" ng-hide="vm.toggleValue">
-  <h1>Sign In</h1>
-
-  <form ng-submit="vm.submitLogIn();" name="signInForm" novalidate>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input ng-model="vm.logIn.email" type="email" ng-model="email" name="email" required class="form-control" id="exampleInputEmail1" placeholder="Email">
-    </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input ng-model="vm.logIn.password" type="password" ng-model="password" name="password" required class="form-control" id="exampleInputPassword1" placeholder="Password">
-    </div>
-    <button type="submit" ng-disabled="signInForm.$invalid" class="btn btn-default">Submit</button>
+  <h1 style="font-family:'Monoton', cursive; margin: 0 auto; font-size: 40px; color: orange;">Sign In</h1><br><br>
+  <form ng-submit="vm.submitLogIn()" name="signInForm" novalidate>
+    <md-input-container class="form-group" style="width:400px;">
+      <label for="exampleInputEmail1" style="font-size: 50px; color: white; text-align: left;">Email address</label>
+      <input ng-model="vm.logIn.email" type="email" name="email" required class="form-control" id="exampleInputEmail1" placeholder="Email" style="color:black; font-size: 20px; background-color:#ffff8d;">
+    </md-input-container><br>
+    <md-input-container class="form-group" style="width:400px;">
+      <label for="exampleInputPassword1" style="font-size: 50px; text-align:left; color: white;">Password</label><br>
+      <input ng-model="vm.logIn.password" type="password" name="password" required class="form-control" id="exampleInputPassword1" placeholder="Password" style="color:black; font-size: 20px; background-color:#ffff8d;">
+    </md-input-container><br>
+    <md-button type="submit" class="md-primary" style="background-color: white; color: black;" ng-disabled="signInForm.$invalid">Submit</md-button>
   </form>
 
-  <p>
+  <p style="color: white;">
     <strong>
-      If you are not a user yet,
-      <a class="underline" ng-click="vm.toggleValue = !vm.toggleValue;"><u>Sign Up</u></a>.
+      If you are not a Partiest yet,
+      <button ng-click="vm.toggleValue = !vm.toggleValue;"><u>Sign Up</u></button>.
     </strong>
   </p>
 </div> <!-- sign-in-form -->
 
 <div class="sign-up-form" ng-show="vm.toggleValue">
-  <h1>Sign Up</h1>
+  <h1 style="font-family:'Monoton', cursive; margin: 0 auto; font-size: 40px; color: orange;">Sign Up</h1>
 
   <form ng-submit="vm.submitSignUp();">
     <div class="form-group">
@@ -59,7 +47,7 @@
 
   <p>
     <strong>
-      If you are already a user,
+      If you are already a Partiest,
       <a class="underline" ng-click="vm.toggleValue = !vm.toggleValue;"><u>Sign In</u></a>.
     </strong>
   </p>
