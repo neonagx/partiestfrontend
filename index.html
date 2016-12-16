@@ -16,7 +16,7 @@
           <md-nav-item ng-click="vm.showAlert()">About</md-nav-item>
           <md-nav-item ui-sref="index" ng-show="vm.authService.isLoggedIn()">All Professional Parties</md-nav-item>
           <md-nav-item ui-sref="new" ng-show="vm.authService.isLoggedIn()">Add Professional Party Event!</md-nav-item>
-          <md-nav-item ng-click="vm.toggleLeft()">Profile</md-nav-item>
+          <md-nav-item ng-click="vm.toggleLeft()" ng-show="vm.authService.isLoggedIn()">Profile</md-nav-item>
       </md-nav-bar>
     </md-content>
     <section layout="row" flex>
