@@ -8,7 +8,7 @@
 
   ProfPartsController.$inject = ['ProfPartResource', 'authService']
   ProfPartsNewController.$inject = ['ProfPartResource', '$state', 'authService']
-  ProfPartsShowController.$inject = ['ProfPartResource', '$stateParams']
+  ProfPartsShowController.$inject = ['ProfPartResource', '$stateParams', '$http']
   ProfPartsEditController.$inject = ['ProfPartResource', '$state', '$stateParams']
 
   function ProfPartsController(ProfPartResource, authService){
@@ -47,13 +47,24 @@
     }
   }
 
-  function ProfPartsShowController(ProfPartResource, $stateParams) {
+  function ProfPartsShowController(ProfPartResource, $stateParams, $http) {
     var vm = this
     vm.part = {}
+    vm.input = ""
+    vm.sendEmail = function sendEmail(){
+      var email = /\S+@\S+\.\S+/
+      if(email.test(vm.input)){
+        $http.post('http://localhost:3000/emails', {id: $stateParams.id, email: vm.input}).then(function(jsonParty){
+          $state.go('index')
+        })
+      }
+    }
 
     ProfPartResource.get({id: $stateParams.id}).$promise.then(function(jsonParty){
       vm.part = jsonParty
     })
+
+
   };
 
   function ProfPartsEditController(ProfPartResource, $state, $stateParams){
