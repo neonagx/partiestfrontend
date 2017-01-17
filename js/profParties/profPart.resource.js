@@ -6,6 +6,6 @@
   ProfPartResource.$inject = ['$resource']
 
   function ProfPartResource($resource){
-    return $resource('https://partiest.herokuapp.com/professionals/:id', {id: '@_id'}, {'update': {method: 'PATCH'}})
+    return $resource('http://partiest.herokuapp.com/professionals/:id', {id: '@_id'}, {'update': {method: 'PATCH'}})
   }
 }());
