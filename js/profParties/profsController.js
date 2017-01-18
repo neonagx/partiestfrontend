@@ -54,7 +54,7 @@
     vm.sendEmail = function(){
       var email = /\S+@\S+\.\S+/
       if(email.test(vm.input)){
-        $http.post('http://localhost:3000/emails', {id: $stateParams.id, email: vm.input}).then(function(jsonParty){
+        $http.post('https://localhost:3000/emails', {id: $stateParams.id, email: vm.input}).then(function(jsonParty){
           console.log('getting response')
         })
       }
